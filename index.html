@@ -25,6 +25,11 @@
 
       <!-- Category Filter -->
       <div class="search-section">
+        <input
+          id="productSearch"
+          type="search"
+          placeholder="Search products by name or keyword…"
+        />
         <select id="categoryFilter">
           <option value="" disabled selected>Choose a Category</option>
           <option value="cleanser">Cleansers</option>
@@ -44,11 +49,14 @@
 
       <!-- Selected Products -->
       <div class="selected-products">
-        <h2>Selected Products</h2>
-        <div id="selectedProductsList"></div>
-        <button id="generateRoutine" class="generate-btn">
-          <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
-        </button>
+        <h2>Selected Products (<span id="selected-count">0</span>)</h2>
+        <ul id="selectedProductsList" class="selected-products-list"></ul>
+        <div class="selected-actions">
+          <button id="clearSelections" class="clear-btn">Clear All</button>
+          <button id="generateRoutine" class="generate-btn">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Routine
+          </button>
+        </div>
       </div>
 
       <!------- Chat Area ------->
